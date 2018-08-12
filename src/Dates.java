@@ -110,5 +110,6 @@ public class Dates
         printDate(2014, 10, 4);
         printDate(2015, 1,1);
         printDate(2013, 12,31);
+        printDate(1987, 11,10);
     }
 }
