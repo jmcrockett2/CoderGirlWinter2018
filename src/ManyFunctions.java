@@ -7,7 +7,6 @@ public class ManyFunctions
      */
     public static int minimum(int a, int b)
     {
-        // TODO
         if (a < b)
         {
             return a;
@@ -20,7 +19,6 @@ public class ManyFunctions
      */
     public static int maximum(int a, int b)
     {
-        // TODO
         if (a > b)
         {
             return a;
@@ -32,7 +30,6 @@ public class ManyFunctions
      */
     public static boolean isOddNumber(int a)
     {
-        // TODO
         return a % 2 == 1;
     }
 
@@ -41,7 +38,6 @@ public class ManyFunctions
      */
     public static boolean isEvenNumber(int a)
     {
-        // TODO
         return a % 2 == 0;
     }
 
@@ -52,7 +48,6 @@ public class ManyFunctions
      */
     public static boolean isVowel(char letter)
     {
-        // TODO
         return "aeiouAEIOU".indexOf(letter) != -1;
     }
 
@@ -66,7 +61,6 @@ public class ManyFunctions
      */
     public static boolean isConsonant(char letter)
     {
-        // TODO
         return "aeiouAEIOU".indexOf(letter) == -1;
     }
 
