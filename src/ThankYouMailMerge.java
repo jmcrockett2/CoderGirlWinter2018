@@ -8,7 +8,7 @@ public class ThankYouMailMerge
     public static void main(String[] args)
     {
         Scanner keyboard = new Scanner(System.in);
-        String personname = "";
+        String personName = "";
         float donation = 0;
         DecimalFormat format = new DecimalFormat("0.00");
         boolean keepGoing = true;
@@ -17,8 +17,8 @@ public class ThankYouMailMerge
         while (keepGoing == true)
         {
             System.out.println("Donor's Name? ");
-            personname = keyboard.nextLine();
-            if (personname.equals("quit"))
+            personName = keyboard.nextLine();
+            if (personName.equals("quit"))
             {
                 keepGoing = false;
             }
@@ -28,7 +28,7 @@ public class ThankYouMailMerge
                     donation = keyboard.nextFloat();
                     keyboard.skip("\n");
                     System.out.println("\n");
-                    System.out.println("Dear " + personname + ",\n");
+                    System.out.println("Dear " + personName + ",\n");
                     System.out.println("Thank you for your donation! We rely on donors like you to keep our");
                     System.out.println("organization effective, and you came through for us. Your donation of $" + format.format(donation));
                     System.out.println("will help our efforts to make a difference in the world.\n");
