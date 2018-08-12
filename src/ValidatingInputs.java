@@ -1,5 +1,3 @@
-import jdk.nashorn.api.tree.NewTree;
-
 import static java.lang.System.out;
 import java.util.Scanner;
 
