@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class CountToTen
 {
-    public static String getEnglishWord(int number)
+    private static String getEnglishWord(int number)
     {
         if (number == 0)
         {
@@ -52,7 +52,7 @@ public class CountToTen
         return "FIXME";
     }
 
-    public static String getSpanishWord(int number)
+    private static String getSpanishWord(int number)
     {
         if (number == 0)
         {
@@ -101,7 +101,7 @@ public class CountToTen
         return "FIXME";
     }
 
-    public static String getGermanWord(int number)
+    private static String getGermanWord(int number)
     {
         if (number == 0)
         {
@@ -150,7 +150,7 @@ public class CountToTen
         return "FIXME";
     }
 
-    public static String getWord(String language, int number)
+    private static String getWord(String language, int number)
     {
         if (number < 0)
         {
@@ -177,16 +177,16 @@ public class CountToTen
 
     public static void main(String[] args)
     {
-        System.out.println("Would you like English or Spanish or German?");
-        System.out.println("Press e or s or g");
+        out.println("Would you like English or Spanish or German?");
+        out.println("Press e or s or g");
         Scanner keyboard = new Scanner(System.in);
         String language = keyboard.nextLine();
 
-        System.out.println("What number do you want the name of? 0-10");
+        out.println("What number do you want the name of? 0-10");
         int number = keyboard.nextInt();
         keyboard.skip("\n");
 
         String spelled_out = getWord(language, number);
-        System.out.println("The word for " + number + " is " + spelled_out);
+        out.println("The word for " + number + " is " + spelled_out);
     }
 }

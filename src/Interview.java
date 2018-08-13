@@ -32,7 +32,7 @@ public class Interview
             {
                 out.print("x");
             }
-            out.println("");
+            out.println(" ");
             out.println("I hope it made you smile!");
         }
     }

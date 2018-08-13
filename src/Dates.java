@@ -6,7 +6,7 @@ public class Dates
     // --- add methods here to make the program work ---
 
     // formatNumberAsTwoDigits
-    public static String formatNumberAsTwoDigits(int number)
+    private static String formatNumberAsTwoDigits(int number)
     {
       if (number < 10)
       {
@@ -19,7 +19,7 @@ public class Dates
     }
 
     // nameFormat
-    public static String nameFormat(int year, int month, int day)
+    private static String nameFormat(int year, int month, int day)
     {
         if(month == 1)
         {
@@ -73,14 +73,14 @@ public class Dates
     }
 
     // slashFormat
-    public static String slashFormat(int year, int month, int day)
+    private static String slashFormat(int year, int month, int day)
     {
         String monthStr = formatNumberAsTwoDigits(month);
         String dayStr = formatNumberAsTwoDigits(day);
         return monthStr + "/" + dayStr + "/" + year;
     }
     // dashFormat
-    public static String dashFormat(int year, int month, int day)
+    private static String dashFormat(int year, int month, int day)
     {
         String monthStr = formatNumberAsTwoDigits(month);
         String dayStr = formatNumberAsTwoDigits(day);
@@ -90,22 +90,22 @@ public class Dates
     // --- end of your work area ---
 
     // don't change this code.
-    public static void printDate(int year, int month, int day)
+    private static void printDate(int year, int month, int day)
     {
-        System.out.println(nameFormat(year, month, day));
-        System.out.println(slashFormat(year, month, day));
-        System.out.println(dashFormat(year, month, day));
-        System.out.println();
+        out.println(nameFormat(year, month, day));
+        out.println(slashFormat(year, month, day));
+        out.println(dashFormat(year, month, day));
+        out.println();
     }
 
     // don't change this code.
     public static void main(String[] args)
     {
-        System.out.println(formatNumberAsTwoDigits(3));
-        System.out.println(formatNumberAsTwoDigits(9));
-        System.out.println(formatNumberAsTwoDigits(10));
-        System.out.println(formatNumberAsTwoDigits(12));
-        System.out.println();
+        out.println(formatNumberAsTwoDigits(3));
+        out.println(formatNumberAsTwoDigits(9));
+        out.println(formatNumberAsTwoDigits(10));
+        out.println(formatNumberAsTwoDigits(12));
+        out.println();
 
         printDate(2014, 10, 4);
         printDate(2015, 1,1);

@@ -6,11 +6,11 @@ public class AreWeThereYet
     public static void main(String[] args)
     {
         Scanner keyboard = new Scanner(System.in);
-        String areWeThere = "";
+        String areWeThere;
         boolean keepGoing = true;
-        while (keepGoing == true)
+        while (keepGoing)
         {
-            System.out.print("Are we there yet? ");
+            out.print("Are we there yet? ");
             areWeThere = keyboard.nextLine();
             if (areWeThere.equals("yes"))
             {
@@ -18,9 +18,9 @@ public class AreWeThereYet
             }
             if ((!areWeThere.equals("yes")) && (!areWeThere.equals("no")))
             {
-                System.out.println("Huh? I didn't understand that.");
+                out.println("Huh? I didn't understand that.");
             }
         }
-        System.out.print("Yay!");
+        out.print("Yay!");
     }
 }

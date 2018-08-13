@@ -10,18 +10,18 @@ public class AddingMachine
         Scanner keyboard = new Scanner(System.in);
         DecimalFormat format = new DecimalFormat();
         float total = 0;
-        float b = 0;
+        float b;
         int counter = 0;
         boolean start = true;
-        System.out.println("Welcome to Adding Machine!");
-        System.out.println("Total = " + format.format(total) + "\n");
+        out.println("Welcome to Adding Machine!");
+        out.println("Total = " + format.format(total) + "\n");
 
-        while (start == true)
+        while (start)
         {
-            System.out.print("Add: ");
+            out.print("Add: ");
             b = keyboard.nextFloat();
             total = total + b;
-            System.out.println("Total: " + format.format(total) + "\n");
+            out.println("Total: " + format.format(total) + "\n");
             if (b > 0)
             {
                 counter++;
@@ -32,6 +32,6 @@ public class AddingMachine
             }
         }
 
-        System.out.println("You entered " + format.format(counter) + " numbers, for a final total of " + format.format(total) + ".");
+        out.println("You entered " + format.format(counter) + " numbers, for a final total of " + format.format(total) + ".");
     }
 }

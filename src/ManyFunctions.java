@@ -5,7 +5,7 @@ public class ManyFunctions
     /**
      * Takes two integer numbers as input and returns whichever number is smaller.
      */
-    public static int minimum(int a, int b)
+    private static int minimum(int a, int b)
     {
         if (a < b)
         {
@@ -17,7 +17,7 @@ public class ManyFunctions
     /**
      * Takes two integer numbers as input and returns whichever number is larger.
      */
-    public static int maximum(int a, int b)
+    private static int maximum(int a, int b)
     {
         if (a > b)
         {
@@ -28,7 +28,7 @@ public class ManyFunctions
     /**
      * Returns true if the integer input is an odd number (1, 3, 5, 7...)
      */
-    public static boolean isOddNumber(int a)
+    private static boolean isOddNumber(int a)
     {
         return a % 2 == 1;
     }
@@ -36,7 +36,7 @@ public class ManyFunctions
     /**
      * Returns true if the integer input is an even number (0,2,4,6,8...)
      */
-    public static boolean isEvenNumber(int a)
+    private static boolean isEvenNumber(int a)
     {
         return a % 2 == 0;
     }
@@ -46,7 +46,7 @@ public class ManyFunctions
      * You can assume only letters are being sent as input (not
      * spaces or punctuation marks or anything else).
      */
-    public static boolean isVowel(char letter)
+    private static boolean isVowel(char letter)
     {
         return "aeiouAEIOU".indexOf(letter) != -1;
     }
@@ -59,7 +59,7 @@ public class ManyFunctions
      * This can be written in 1 short line of code without typing out
      * all the consonants in the alphabet.  Can you figure out how?
      */
-    public static boolean isConsonant(char letter)
+    private static boolean isConsonant(char letter)
     {
         return "aeiouAEIOU".indexOf(letter) == -1;
     }
