@@ -16,7 +16,7 @@ public class AreWeThereYet
             {
                 keepGoing = false;
             }
-            if ((!areWeThere.equals("yes")) && (!areWeThere.equals("no")))
+            else if (!areWeThere.equals("no"))
             {
                 out.println("Huh? I didn't understand that.");
             }
