@@ -1,10 +1,13 @@
 import static java.lang.System.out;
+
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class GroceryList
 {
     public static void main(String[] args)
     {
+        DecimalFormat money = new DecimalFormat("0.00");
         out.println("Please list three items on your grocery list.");
         Scanner keyboard = new Scanner(System.in);
         out.println("Item 1?");
@@ -38,6 +41,6 @@ public class GroceryList
 
         float total = ((qty1 * cost1) + (qty2 * cost2) + (qty3 * cost3));
         out.println("Calculating your grocery bill.");
-        out.println("Your total cost is f" + total);
+        out.println("Your total cost is $" + (money.format(total)));
     }
 }
