@@ -10,7 +10,7 @@ public class ThankYouMailMerge
         Scanner keyboard = new Scanner(System.in);
         String personName;
         float donation;
-        DecimalFormat format = new DecimalFormat("0.00");
+        DecimalFormat money = new DecimalFormat("0.00");
         boolean keepGoing = true;
         out.println("--- Thank You Letters ---\n");
 
@@ -30,7 +30,7 @@ public class ThankYouMailMerge
                     out.println("\n");
                     out.println("Dear " + personName + ",\n");
                     out.println("Thank you for your donation! We rely on donors like you to keep our");
-                    out.println("organization effective, and you came through for us. Your donation of $" + format.format(donation));
+                    out.println("organization effective, and you came through for us. Your donation of $" + money.format(donation));
                     out.println("will help our efforts to make a difference in the world.\n");
                     out.println("As you may know, we are a registered non-profit organization, so your");
                     out.println("donation is tax deductible. You may use this letter as a receipt for tax");
