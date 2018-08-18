@@ -4,45 +4,37 @@ import java.util.Random;
 
 public class GuessMyNumber
 {
-    public static void main(String[] args)
+    private static int validate()
     {
+        out.println("Guess: ");
         Scanner keyboard = new Scanner(System.in);
+        int guess;
         Random random = new Random(5);
-        int guess = 0;
-        int number;
-        number = random.nextInt(100);
-
-        while (number != guess)
+        int random2 = 0;
+        random2 = random.nextInt(100);
+        do
         {
-            out.println("I'm thinking of a number between 1 and 100. What is it?\n");
-            out.println("Guess: ");
             guess = keyboard.nextInt();
             keyboard.skip("\n");
-            if (guess > 100 || guess < 1)
+            if (guess < 1 || guess > 100)
             {
                 out.println("Oops! That number isn't between 1 and 100. Try again.");
             }
-            else if (guess > number)
+            else if (guess > random2)
             {
                 out.println("My number is lower.");
             }
-            else if (guess < number)
+            else if (guess < random2)
             {
                 out.println("My number is higher.");
             }
-            else if (guess == number)
-            {
-                out.println("You got it! My number was " + random + ".\n");
-                out.println("Play again?");
-                String again = keyboard.nextLine();
-                if (again.equals("yes"))
-                {
-                    guess = 0;
-                    number = random.nextInt(100);
-                }
-            }
-
         }
+        while (guess < 1 || guess > 100);
+        return guess;
+    }
+
+    public static void main(String[] args)
+    {
 
     }
 }
