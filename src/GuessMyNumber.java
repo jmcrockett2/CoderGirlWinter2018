@@ -4,15 +4,14 @@ import java.util.Random;
 
 public class GuessMyNumber
 {
-    private static int validate()
+    private static int validate(int random2)
     {
-        out.println("Guess: ");
+        out.println("I'm thinking of a number between 1 and 100. What is it?\n");
         Scanner keyboard = new Scanner(System.in);
         int guess;
-        Random random = new Random(5);
-        int random2 = random.nextInt(100);
         do
         {
+            out.println("Guess: ");
             guess = keyboard.nextInt();
             keyboard.skip("\n");
             if (guess < 1 || guess > 100)
@@ -33,12 +32,12 @@ public class GuessMyNumber
     public static void main(String[] args)
     {
         Scanner keyboard = new Scanner(System.in);
+        Random random = new Random(5);
         boolean keepGoing = true;
-        do
+        while (keepGoing)
         {
-            out.println("I'm thinking of a number between 1 and 100. What is it?\n");
-            int guess = validate();
-            out.println("You got it! My number was " + guess + ".");
+            int random2 = validate(random.nextInt(100));
+            out.println("You got it! My number was " + random2 + ".");
             out.println("Play again?");
             String again = keyboard.nextLine();
             if (!again.equals("yes"))
@@ -46,6 +45,6 @@ public class GuessMyNumber
                 keepGoing = false;
             }
         }
-        while (keepGoing);
+
     }
 }
