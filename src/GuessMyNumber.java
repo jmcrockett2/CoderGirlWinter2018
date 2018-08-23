@@ -9,6 +9,7 @@ public class GuessMyNumber
         out.println("I'm thinking of a number between 1 and 100. What is it?\n");
         Scanner keyboard = new Scanner(System.in);
         int guess;
+
         do
         {
             out.println("Guess: ");
