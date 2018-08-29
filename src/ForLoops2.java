@@ -3,6 +3,14 @@ import java.util.Scanner;
 
 public class ForLoops2
 {
+    private static void bar(int numberIn)
+    {
+        for(int width = 0; width < numberIn; width++)
+        {
+            out.print("#");
+        }
+    }
+
     public static void main(String[] args)
     {
         Scanner keyboard = new Scanner(System.in);
@@ -13,10 +21,7 @@ public class ForLoops2
            out.print("number? ");
            numberIn = keyboard.nextInt();
            keyboard.skip("\n");
-           for(int width = 1; width <= numberIn; width++)
-           {
-                out.print("#");
-           }
+           bar(numberIn);
            out.print("\n");
        }
        while (numberIn != 0);
