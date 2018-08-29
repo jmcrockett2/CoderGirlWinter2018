@@ -6,7 +6,7 @@ public class MultiplicationTablesGrid
     public static void main(String[] args)
     {
         Scanner keyboard = new Scanner(System.in);
-        out.println("Welcome to Multiplication Tables");
+        out.println("Welcome to Multiplication Tables\n");
         out.print("How large would you like to see them? ");
         int size = keyboard.nextInt();
         keyboard.skip("\n");
